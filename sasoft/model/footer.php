@@ -411,6 +411,10 @@ $(document).ready(function() {
 				$(".seniority").attr("style","border:2px solid red;color:red;");
 				$(".seniority").attr("placeholder","Input Empty!!..");
 			}
+			else if(phpUpload.length<1){
+			     $(".AddNewEmployee").attr("style","border:2px solid red;color:red;");
+			     $(".AddNewEmployee").html("Please add one more skill!!");
+			}
 			else{
 				const url="../controller/upload.php";
         $.ajax({
@@ -444,10 +448,11 @@ $(document).ready(function() {
 				      $(".yrs-experience").val("");
 				      $(".seniority").val("");
 				      for(let i=1;i<=size;i++){
-								$(".skill"+i).val("");
-								$(".yrs-experience"+i).val("");
-								$(".seniority"+i).val("");
-							}
+						$(".skill"+i).val("");
+						$(".yrs-experience"+i).val("");
+						$(".seniority"+i).val("");
+					}
+		    			window.location=("./");
             }
           }
         });
